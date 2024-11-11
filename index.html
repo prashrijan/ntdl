@@ -10,27 +10,124 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="wrapper">
       <div class="container w-100 h-100">
+        <!-- header  -->
         <div class="row p-5">
           <div class="col text-uppercase text-center">
             <h1>Not To Do List</h1>
           </div>
         </div>
-        <div class="row bg-primary h-25">
-          <div class="col-7">Task</div>
-          <div class="col-2">Hours</div>
-          <div class="col-3">Add Button</div>
+
+        <!-- task input -->
+        <div class="row border rounded-4 p-5 shadow-lg">
+          <div class="col-7">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Task"
+              id="input-task"
+            />
+          </div>
+          <div class="col-2">
+            <input
+              type="number"
+              class="form-control"
+              placeholder="hours"
+              id="hours"
+            />
+          </div>
+          <div class="col-3 d-grid">
+            <button type="button" class="btn btn-success" id="button">
+              Add task
+            </button>
+          </div>
         </div>
-        <div class="row bg-success h-25">
-          <div class="col">Entry list</div>
-          <div class="col">Bad List</div>
+
+        <div class="row mt-5 gap-4">
+          <!-- entry list  col-->
+          <div class="col">
+            <!-- entry list header row -->
+            <div class="row">
+              <div class="col text-center">
+                <h2>Entry List</h2>
+                <hr />
+              </div>
+            </div>
+            <!-- entry list table row -->
+            <div class="row">
+              <table class="table table-hover text-center">
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-danger me-1">
+                        <i class="ri-delete-bin-line"></i>
+                      </button>
+                      <button type="button" class="btn btn-success">
+                        <i class="ri-arrow-right-line"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- bad list col -->
+          <div class="col">
+            <!-- bad list header row -->
+            <div class="row">
+              <div class="col text-center">
+                <h2>Bad List</h2>
+                <hr />
+              </div>
+            </div>
+
+            <!-- bad list table row -->
+            <div class="row">
+              <table class="table table-hover text-center">
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-success me-1">
+                        <i class="ri-arrow-left-line"></i>
+                      </button>
+                      <button type="button" class="btn btn-danger">
+                        <i class="ri-delete-bin-line"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="row">
+              <div class="alert alert-light" role="alert">
+                A simple light alert—check it out!
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="row bg-danger h-25">
-          <div class="col">Total Hours</div>
+
+        <!-- total time -->
+        <div class="row h-25">
+          <div class="col">
+            <div class="alert alert-light" role="alert">
+              A simple light alert—check it out!
+            </div>
+          </div>
         </div>
       </div>
     </div>
