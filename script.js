@@ -7,7 +7,7 @@ const errorMessage = document.querySelector(".error-msg");
 
 errorMessage.classList.add("d-none");
 
-const tasksList = [];
+let tasksList = [];
 
 addButton.addEventListener("click", () => {
   let task = taskField.value;
@@ -32,6 +32,7 @@ addButton.addEventListener("click", () => {
   hourField.value = "";
 });
 
+// rerender the table row each time
 const createTableRow = () => {
   entryListTable.innerHTML = "";
   badListTable.innerHTML = "";
@@ -46,7 +47,9 @@ const createTableRow = () => {
         <td>${task}</td>
         <td>${hour} hrs</td>
         <td class="text-end">
-            <button type="button" class="btn btn-danger me-1">
+            <button type="button" class="btn btn-danger me-1"
+            onclick="deleteTask(${id})"
+            >
                 <i class="ri-delete-bin-line"></i>
             </button>
             <button type="button" class="btn btn-success" onclick="toggleTaskType(${id})">
@@ -65,7 +68,9 @@ const createTableRow = () => {
             onclick="toggleTaskType(${id})">
             <i class="ri-arrow-left-line"></i>
             </button>
-            <button type="button" class="btn btn-danger me-1">
+            <button type="button" class="btn btn-danger me-1"
+            onclick="deleteTask(${id})"
+            >
                 <i class="ri-delete-bin-line"></i>
             </button>
         </td>
@@ -80,10 +85,16 @@ const createTableRow = () => {
   });
 };
 
+// convert the task type
 const toggleTaskType = (id) => {
   let task = tasksList.find((task) => task.id === id);
 
   task.isBad = task.isBad === true ? false : true;
 
+  createTableRow();
+};
+
+const deleteTask = (id) => {
+  tasksList = tasksList.filter((task) => task.id !== id);
   createTableRow();
 };
