@@ -97,26 +97,12 @@
             <!-- bad list table row -->
             <div class="row">
               <table class="table table-hover text-center">
-                <tbody id="bad-list">
-                  <!-- <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td class="text-end">
-                      <button type="button" class="btn btn-warning me-1">
-                        <i class="ri-arrow-left-line"></i>
-                      </button>
-                      <button type="button" class="btn btn-danger">
-                        <i class="ri-delete-bin-line"></i>
-                      </button>
-                    </td>
-                  </tr> -->
-                </tbody>
+                <tbody id="bad-list"></tbody>
               </table>
             </div>
             <div class="row">
-              <div class="alert alert-light" role="alert">
-                A simple light alert—check it out!
+              <div class="alert alert-light bad-alert" role="alert">
+                You could have saved = <span id="badHours">0</span> hrs
               </div>
             </div>
           </div>
@@ -125,9 +111,34 @@
         <!-- total time -->
         <div class="row h-25">
           <div class="col">
-            <div class="alert alert-light" role="alert">
-              A simple light alert—check it out!
+            <div class="alert alert-light good-alert" role="alert">
+              The total hours allocated = <span id="totalHours">0</span> hours
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div
+          id="liveToast"
+          class="toast"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-header">
+            <!-- <img src="..." class="rounded me-2" alt="..." /> -->
+            <strong class="me-auto">Not-To-Do-List</strong>
+            <small>1s ago</small>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="toast-body">
+            <span id="toastMessage"></span>
           </div>
         </div>
       </div>

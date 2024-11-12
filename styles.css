@@ -11,7 +11,7 @@ body {
 }
 
 .wrapper {
-  height: 100svh;
+  min-height: 100svh;
   background: rgb(34, 193, 195);
   background: linear-gradient(
     0deg,
@@ -28,4 +28,26 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+input[type="checkbox"] {
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 1px;
+  border: 2px solid #8b8c89;
+  appearance: none;
+  background-color: transparent;
+  outline: none;
+  transition: outline 0.1s;
+}
+
+input[type="checkbox"]:checked {
+  background-size: cover;
+  padding: 2px;
+}
+
+input[type="checkbox"]:not(:disabled):checked {
+  background-color: #198754;
 }
