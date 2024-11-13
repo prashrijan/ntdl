@@ -4,7 +4,7 @@ This is a web application that helps users manage their "Not-To-Do" tasks, keepi
 
 ## Live Demo
 
-[Live Demo Link](https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPOSITORY_NAME/)
+[Live Demo Link](https://prashrijan.github.io/not-to-do-list/)
 
 ## Features
 
@@ -20,21 +20,9 @@ This is a web application that helps users manage their "Not-To-Do" tasks, keepi
 - **CSS** (Bootstrap 5 for styling)
 - **JavaScript**
 
-## Screenshots
+### Usage
 
-![Screenshot of Not-To-Do List](screenshot.png)
-
-## Getting Started
-
-To get a local copy up and running, follow these steps:
-
-### Prerequisites
-
-- Web browser (Chrome, Firefox, Safari, etc.)
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME.git
-   ```
+1. **Enter a Task**: Enter a task and its estimated hours in the input fields.
+2. **Add Task**: Click the "Add Task" button to add it to the "Good List."
+3. **Toggle Tasks**: Use the toggle buttons to switch tasks between the "Good" and "Bad" lists.
+4. **Track Hours**: Monitor total hours and see potential hours saved by reducing tasks in the "Bad List."
