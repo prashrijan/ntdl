@@ -20,7 +20,7 @@ const getAndDisplayList = () => {
   let task = taskField.value;
   let hour = hourField.value;
 
-  if (!task && !hour) {
+  if (!task || !hour) {
     errorMessage.classList.add("d-block");
     errorMessage.classList.remove("d-none");
     return;
