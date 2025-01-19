@@ -5,8 +5,8 @@ POST {{baseUrl}}
 Content-Type: application/json
 
 {
-    "taskName": "Eat Food",
-    "time" : 1,
+    "taskName": "scroll phone",
+    "time" : 6,
     "isGood" : true,
     "isCompleted" : false
 }
@@ -15,7 +15,6 @@ Content-Type: application/json
 GET {{baseUrl}}
 
 ###UPDATING THE TASK
-PUT {{baseUrl}}
-
+PATCH {{baseUrl}}/678ce6a94f27ebd36712fc2d
 ### DELETE THE TASK
-DELETE {{baseUrl}}
+DELETE {{baseUrl}}/678ce6a94f27ebd36712fc2d
