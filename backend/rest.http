@@ -1,0 +1,21 @@
+@baseUrl = http://localhost:3000/api/v1/tasks
+
+### CREATING THE TASK
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+    "taskName": "Eat Food",
+    "time" : 1,
+    "isGood" : true,
+    "isCompleted" : false
+}
+
+### READING THE TASK
+GET {{baseUrl}}
+
+###UPDATING THE TASK
+PUT {{baseUrl}}
+
+### DELETE THE TASK
+DELETE {{baseUrl}}
